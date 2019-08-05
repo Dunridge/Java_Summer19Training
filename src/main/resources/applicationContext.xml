@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <bean id="musicBean"
+          class="com.max.training.PopMusic"
+          init-method="init"
+          destroy-method="destroy"
+          scope="prototype">
+    </bean>
+
+    <bean id="musicBean2"
+          class="com.max.training.ClassicalMusic"
+          init-method="init"
+          destroy-method="destroy">
+    </bean>
+
+    <bean id = "musicBean3"
+    class="com.max.training.ClassicalMusic"
+    factory-method="getClassicalMusic">
+    </bean>
+
+    <!--    <bean id="classicalBean"-->
+    <!--          class="com.max.training.ClassicalMusic">-->
+    <!--    </bean>-->
+
+    <!--    <bean id="rockBean"-->
+    <!--          class="com.max.training.RockMusic">-->
+    <!--    </bean>-->
+
+    <!--    <bean id="popBean"-->
+    <!--          class="com.max.training.PopMusic">-->
+    <!--    </bean>-->
+
+
+    <!--    <util:list list-class="java.util.ArrayList" id="musicList"-->
+    <!--               value-type="com.max.training.Music">-->
+    <!--        <ref bean="classicalBean"/>-->
+    <!--        <ref bean="rockBean"/>-->
+    <!--        <ref bean="popBean"/>-->
+    <!--    </util:list>-->
+
+    <!--    <bean id="musicPlayer"-->
+    <!--          class="com.max.training.MusicPlayer"-->
+    <!--    >-->
+    <!--        <property name="musicList" ref="musicList"/>-->
+    <!--    </bean>-->
+
+</beans>
