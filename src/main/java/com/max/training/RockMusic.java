@@ -2,7 +2,7 @@ package com.max.training;
 
 public class RockMusic implements Music {
 
-    public RockMusic() {}
+    public RockMusic() {}//
 
     public RockMusic getRockMusic() {
         return new RockMusic();

@@ -10,7 +10,7 @@ public class MusicPlayer {
     private Music music;
     private List<Music> musicList = new ArrayList<>();
 
-
+    //
     private String name;
     private int volume = 60;
 

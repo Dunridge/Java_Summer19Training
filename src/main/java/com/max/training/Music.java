@@ -6,3 +6,4 @@ public interface Music {
     void destroy();
     String getSong();
 }
+//

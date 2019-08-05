@@ -4,6 +4,7 @@ public class PopMusic implements Music {
 
     private PopMusic() {}
 
+    //
     public PopMusic getPopMusic() {
         return new PopMusic();
     }
